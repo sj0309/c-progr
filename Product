@@ -1,0 +1,12 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{ 
+double x,y,pdt;
+cout<<"Enter two integers for multiplication:";
+cin>>x>>y;
+pdt=(x*y);
+cout<<"Product="<<pdt;
+return 0;
+}
