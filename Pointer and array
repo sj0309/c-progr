@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+int elts[5];
+int *ptr=&elts[0];
+cout<<"Enter elements:";
+for(int i=0;i<5;i++)
+{ cin>>elts[5];
+}
+cout<<"You entered:";
+for(int i=0;i<5;i++)
+{ 
+cout<<endl<<*ptr;
+}
+return 0;
+} 
+   
+
+
+
+OR
+
+
+
+#include<iostream>
+using namespace std;
+int main()
+{
+int elts[5];
+cout<<" Enter elements:";
+for(int i=0;i<5;i++)
+cin>>elts[i];
+cout<<" You entered:";
+for(int i=0;i<5;i++)
+cout<<endl<<*(elts+i);
+return 0;
+}
