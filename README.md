@@ -1,2 +1,0 @@
-# c-progr
-Sakshi joshi
