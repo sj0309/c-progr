@@ -11,7 +11,7 @@ void enterTime(void);
 void convertIntoSeconds(void);
 void showTime(void);
 };
-void Time:: enterTime(void)
+void Time:: enterTime(void)  //::- scope resolution operator, used to call global variables.
 {
 cout<<"Enter time:"<<endl;
 cout<<"Hours?     ";     cin>>hh;
@@ -20,8 +20,20 @@ cout<<"Seconds?   ";     cin>>ss;
 }
 void Time:: convertIntoSeconds(void);
 { 
-seconds=hh*3600+mm*60+ss;
+s=hh*3600+mm*60+ss;
 }
 void Time:: showTime(void);
 {
-cout<<"The time is="<<setw(2)<<setfill('0')<<hh<<":";
+cout<<"The time is="<<setw(2)<<setfill('0')<<hh<<":"   //setw and setfill are C++ manipulators under the header file<iomanip>
+                    <<setw(2)<<setfill('0')<<mm<<":"   
+                    <<setw(2)<<setfill('0')<<ss<<":"<<endl;
+cout<<"Time in total seconds:"<<s;.
+}
+int main()
+{
+Time T; // creating objects.
+T.enterTime();
+T.convertIntoSeconds();
+T.showTime();
+return 0;
+}
