@@ -1,0 +1,27 @@
+#include<iostream>
+#include<iomanip>
+using namespace std;
+class Time
+{
+private:
+int s;
+int hh:mm:ss;
+public:
+void enterTime(void);
+void convertIntoSeconds(void);
+void showTime(void);
+};
+void Time:: enterTime(void)
+{
+cout<<"Enter time:"<<endl;
+cout<<"Hours?     ";     cin>>hh;
+cout<<"Minutes?   ";     cin>>mm;
+cout<<"Seconds?   ";     cin>>ss;
+}
+void Time:: convertIntoSeconds(void);
+{ 
+seconds=hh*3600+mm*60+ss;
+}
+void Time:: showTime(void);
+{
+cout<<"The time is="<<setw(2)<<setfill('0')<<hh<<":";
