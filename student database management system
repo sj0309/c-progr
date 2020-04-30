@@ -1,4 +1,4 @@
-// student database management system using arrays, structures
+// student database management system using switch case, arrays, structures
 #include<iostream>
 using namespace std;
 #include<conio.h>
