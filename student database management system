@@ -1,0 +1,211 @@
+// student database management system using arrays, structures
+#include<iostream>
+using namespace std;
+#include<conio.h>
+#include<stdio.h>
+
+struct student
+{
+	char name[25];
+	char address[25];
+	int rollno;
+	char classs[20];
+	int age;
+	long double tel;
+	int marks;
+	char grade[4];
+};
+int main()
+{
+	char put;
+	int arr=0;
+	do
+	{
+		student stud[10];
+	
+	
+		cout<<"Press 1 Enter Record\n";
+		cout<<"Press 2 Delete Record\n";
+		cout<<"Press 3 Update Record\n";
+		cout<<"Press 4 Search Record\n";
+		cout<<"Press 5 Display Record\n";
+		cout<<"\n \t Select Option::";
+		int rolchk=0;
+	
+		int std;
+		cin>>std;
+		
+		switch (std)
+		{
+		case 1:
+			cout<<"\n Enter the data of student no "<<arr+1<<" is:\n";
+			cout<<"\t Enter the roll no=";
+			int rol2; 
+			int rol;
+			cin>>rol;
+			for(int j=0;j<=arr;j++)
+			{
+				rol2=rol;
+				if(rol2==stud[j].rollno)
+				{
+					rolchk=1;
+				}
+			}
+			if(rolchk!=1)
+			{
+				stud[arr].rollno=rol;
+				cout<<"\tEnter the name=";
+				cin>>stud[arr].name;
+				cout<<"\tEnter the address=";
+				cin>>stud[arr].address;
+				cout<<"\tEnter the telephone no=";
+				cin>>stud[arr].tel;
+				cout<<"\t Enter the class=";
+				cin>>stud[arr].classs;
+				cout<<"\tEnter the marks=";
+				cin>>stud[arr].marks;
+				cout<<"\tEnter the grade=";
+				cin>>stud[arr].grade;
+				cout<<"\t Enter the age=";
+				cin>>stud[arr].age;
+				arr=arr+1;
+			}
+			else
+			{
+				cout<<"This record has been already entered\n";
+			}
+			break;
+			case 2:
+				cout<"\nEnter the roll no of the student to delete::\n";
+				cin>>rol;
+				for(int j=0;j<arr;j++)
+				{
+					rol2=rol;
+					if(rol2==stud[j].rollno)
+					{
+						stud[j].rollno='d';
+						cout<<"\t Record deleted";
+					}
+				}
+				break;
+				case 3:
+					cout<"\nEnter the roll no of the student to update::\n";
+					cin>>rol;
+					for(int j=0;j<=arr;j++)
+					{
+						rol2=rol;
+						if(rol2==stud[j].rollno)
+						{
+						cout<<"\troll no=";
+						cout<<stud[j].rollno;
+						cout<<"\tname=";
+						cout<<stud[j].name;
+						cout<<"\taddress=";
+						cout<<stud[j].address;
+						cout<<"\ttelephone no=";
+						cout<<stud[j].tel;
+						cout<<"\tclass=";
+						cout<<stud[j].classs;
+						cout<<"\tmarks=";
+						cout<<stud[j].marks;
+						cout<<"\tgrade=";
+						cout<<stud[j].grade;
+						cout<<"\n \t Reenter data";
+							cout<<"\n \tEnter the name=";
+				            cin>>stud[arr].name;
+				            cout<<"\tEnter the address=";
+				            cin>>stud[arr].address;
+				            cout<<"\tEnter the telephone no=";
+				            cin>>stud[arr].tel;
+			              	cout<<"\t Enter the class=";
+				            cin>>stud[arr].classs;
+				            cout<<"\tEnter the marks=";
+			            	cin>>stud[arr].marks;
+				            cout<<"\tEnter the grade=";
+			                cin>>stud[arr].grade;
+			            	cout<<"\t Enter the age=";
+			            	cin>>stud[arr].age;	
+						}
+					}
+					break;
+					case 4:
+						cout<"\nEnter the roll no of the student to search::\n";
+					cin>>rol;
+					
+					for(int j=0;j<=arr;j++)
+					{
+					
+					
+						rol2=rol;
+						if(rol2==stud[j].rollno)
+						{
+						
+						
+						
+						cout<<"\n \t roll no=";
+						cout<<stud[j].rollno;
+						cout<<"\n \t name=";
+						cout<<stud[j].name;
+						cout<<"\n \t address=";
+						cout<<stud[j].address;
+						cout<<"\n \t telephone no=";
+						cout<<stud[j].tel;
+						cout<<"\n \t class=";
+						cout<<stud[j].classs;
+						cout<<"\n \t marks=";
+						cout<<stud[j].marks;
+						cout<<"\n \t grade=";
+						cout<<stud[j].grade;
+						
+					}}
+
+
+					break;
+					
+					case 5:
+						cout<<"\n";
+						for(int i=0;i<1;i++)
+					{
+						
+						
+						cout<<"roll no |";
+						cout<<"name |";
+						cout<<"address |";
+						cout<<"telephone no |";
+						cout<<"class |";
+						cout<<"marks |";
+						cout<<"grade | \n";
+						for(int k=0;k<arr;k++)
+						{
+							if(stud[k].rollno!='d')
+							{
+							cout<"n";
+							cout<<" ";
+								cout<<stud[k].rollno;
+						cout<<"  |  ";
+						cout<<stud[k].name;
+						cout<<"  |  ";
+						cout<<stud[k].address;
+						cout<<"  |  ";
+						cout<<stud[k].tel;
+						cout<<"  |  ";
+						cout<<stud[k].classs;
+						cout<<"  |  ";
+						cout<<stud[k].marks;
+						cout<<"  |  ";
+					cout<<stud[k].grade<<"\n";
+					}
+				}}
+					cout<<"\n_____________________________________________________";
+					break;
+					default:
+						cout<<"\t Wrong Option Selected";
+						break;
+						}
+						cout<<"\n \n \t Do u want to continue again[Y/N]";
+						cin>>put;
+	}
+	while(put=='y');
+	return 0;
+	getch();
+}
