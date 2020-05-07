@@ -1,0 +1,7 @@
+/*PYTHON PROGRAM WHICH ACCEPTS THE RADIUS OF A CIRCLE FROM THE USER AND COMPUTES AREA.*/
+>>> from math import pi    //IMPORTS MATH HEADER FILE.
+>>> r=float(input("Enter a radius:"))
+Enter a radius:1.1
+>>> A=(pi*r*r)
+>>> print("Area of the circle is",format(A,'.3f'),"sq units.")  //USING FORMAT SPECIFIER UPTO 3 DECIMAL PLACES.
+Area of the circle is 3.801 sq units.  //FINAL OUTPUT.
